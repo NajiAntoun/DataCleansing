@@ -156,7 +156,9 @@ the tidy set is an average-based aggregation by activity and subject of all mean
 run_analysis.R
 
 ### Pre-requesites
-the script uses the data.table library which should be installed as a pre-requesite. 
+the script uses the following libraries which should be installed as a pre-requesite: 
+* data.table
+* dplyr
 
 ### Usage
 1. unzip the *getdata-projectfiles-UCI HAR Dataset.zip* zip file in your R working directory
