@@ -66,7 +66,7 @@ Transformations done :
 ## Tidy Set 
 
 ### Description
-the tidy set is an average-based aggregation by activity and subject of all mean and standard deviation measures available in the source.
+the tidy set is an average-based aggregation by activity and subject of all mean and standard deviation measures available in the test and train source data set.
 
 * **Filename** : _TidyData.txt_
 * **Header** : _yes_
