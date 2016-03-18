@@ -12,14 +12,14 @@
 
 library(data.table)
 
-## read features and activities labels
+## reading features and activities labels
 feature_labels  <- read.table("UCI HAR Dataset/features.txt")
 activity_labels <- read.table("UCI HAR Dataset/activity_labels.txt")
 
 ## storing needed columns (mean and standard deviation)
 features_ext <- grepl("mean|std", t(feature_labels[2]), ignore.case=TRUE)
 
-## read train related data and adding columns names
+## reading train related data and adding columns names
 train_activities <- merge(read.table("UCI HAR Dataset/train/y_train.txt", header = FALSE), activity_labels, by.x="V1", by.y="V1")
 names(train_activities) = c("Activity_id", "Activity")
 train_subjects   <- read.table("UCI HAR Dataset/train/subject_train.txt", header = FALSE)
@@ -33,7 +33,7 @@ train_features <- train_features[,t(features_ext), with=FALSE]
 ## column-binding all training data together but taking out activity_id column
 trainData <- as.data.table(cbind(train_subjects, train_activities[2], train_features))
 
-## read test related data and adding columns names
+## reading test related data and adding columns names
 test_activities <- merge(read.table("UCI HAR Dataset/test/y_test.txt", header = FALSE), activity_labels, by.x="V1", by.y="V1")
 names(test_activities) = c("Activity_id", "Activity")
 test_subjects   <- read.table("UCI HAR Dataset/test/subject_test.txt", header = FALSE)
@@ -77,5 +77,5 @@ tidyData <- as.data.table(aggregate(. ~Activity + Subject, rawData, mean))
 ## sorting data by Activity and Subject
 tidyData <- tidyData[order(Activity, Subject),]
 
-## write the tidy data into a file
+## writing the tidy data into a file
 write.table(tidyData, file = "TidyData.txt", row.names = FALSE)
