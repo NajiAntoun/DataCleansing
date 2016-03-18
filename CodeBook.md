@@ -81,7 +81,7 @@ the tidy set is an average-based aggregation by activity and subject of all mean
 * **Factors**
     * Activity
     * Subject
-* **Measures**
+* **Measures (averages)**
     * TimeBodyAccelerationMean-X
     * TimeBodyAccelerationMean-Y 
     * TimeBodyAccelerationMean-Z
