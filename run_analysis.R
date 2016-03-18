@@ -1,11 +1,15 @@
-## The goal of this script is to prepare tidy data that can be used for later analysis
+## --------------------------------------------------------------------------- ##
+## The goal of this script is to prepare tidy data 
+## that can be used for later analysis
 ## Steps : 
 ## 1. Merges the training and the test sets to create one data set.
-## 2. Extracts only the measurements on the mean and standard deviation for each measurement.
+## 2. Extracts only the measurements on the mean and standard deviation 
+##    for each measurement.
 ## 3. Uses descriptive activity names to name the activities in the data set
 ## 4. Appropriately labels the data set with descriptive variable names.
-## 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-
+## 5. From the data set in step 4, creates a second, independent tidy data set 
+##    with the average of each variable for each activity and each subject.
+## --------------------------------------------------------------------------- ##
 
 library(data.table)
 
@@ -24,12 +28,11 @@ names(train_subjects) = c("Subject")
 train_features   <- fread("UCI HAR Dataset/train/X_train.txt", header = FALSE)
 names(train_features) <- t(feature_labels[2])
 
-## subsetting train features to keep only needed columns (mean and standard deviation)
+## subsetting train features to keep only needed columns : mean and standard deviation
 train_features <- train_features[,t(features_ext), with=FALSE]
 
 ## column-binding all training data together but taking out activity_id column
 trainData <- as.data.table(cbind(train_subjects, train_activities[2], train_features))
-
 
 ## read test related data and adding columns names
 test_activities <- merge(read.table("UCI HAR Dataset/test/y_test.txt", header = FALSE), activity_labels, by.x="V1", by.y="V1")
@@ -48,13 +51,12 @@ testData <- as.data.table(cbind(test_subjects, test_activities[2], test_features
 ## appending training to test data
 rawData <- rbind(testData, trainData)
 
-## freeing memory: cleanup big temporary data.frames/data.tables
+## freeing memory: clean up big temporary data.frames/data.tables
 rm(testData, trainData, train_features, test_features)
 
 ## setting Activity and Subject as factors
 rawData$Activity <- factor(rawData$Activity)
 rawData$Subject  <- factor(rawData$Subject)
-
 
 ## renaming columns names
 names(rawData)<-gsub("()", "", names(rawData), fixed = TRUE)
