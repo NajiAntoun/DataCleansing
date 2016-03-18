@@ -17,11 +17,11 @@ activity_labels <- read.table("UCI HAR Dataset/activity_labels.txt")
 features_ext <- grepl("mean|std", t(feature_labels[2]), ignore.case=TRUE)
 
 ## read train related data and adding columns names
-train_activities <- merge(read.table("UCI HAR Dataset/train/y_train.txt",       header = FALSE), activity_labels, by.x="V1", by.y="V1")
+train_activities <- merge(read.table("UCI HAR Dataset/train/y_train.txt", header = FALSE), activity_labels, by.x="V1", by.y="V1")
 names(train_activities) = c("Activity_id", "Activity")
 train_subjects   <- read.table("UCI HAR Dataset/train/subject_train.txt", header = FALSE)
 names(train_subjects) = c("Subject")
-train_features   <- fread("UCI HAR Dataset/train/X_train.txt",       header = FALSE)
+train_features   <- fread("UCI HAR Dataset/train/X_train.txt", header = FALSE)
 names(train_features) <- t(feature_labels[2])
 
 ## subsetting train features to keep only needed columns (mean and standard deviation)
@@ -32,11 +32,11 @@ trainData <- as.data.table(cbind(train_subjects, train_activities[2], train_feat
 
 
 ## read test related data and adding columns names
-test_activities <- merge(read.table("UCI HAR Dataset/test/y_test.txt",       header = FALSE), activity_labels, by.x="V1", by.y="V1")
+test_activities <- merge(read.table("UCI HAR Dataset/test/y_test.txt", header = FALSE), activity_labels, by.x="V1", by.y="V1")
 names(test_activities) = c("Activity_id", "Activity")
 test_subjects   <- read.table("UCI HAR Dataset/test/subject_test.txt", header = FALSE)
 names(test_subjects) = c("Subject")
-test_features   <- fread("UCI HAR Dataset/test/X_test.txt",       header = FALSE)
+test_features   <- fread("UCI HAR Dataset/test/X_test.txt",  header = FALSE)
 names(test_features) = t(feature_labels[2])
 
 ## subsetting test features to keep only needed columns (mean and standard deviation)
@@ -52,8 +52,8 @@ rawData <- rbind(testData, trainData)
 rm(testData, trainData, train_features, test_features)
 
 ## setting Activity and Subject as factors
-rawData$Activity    <- factor(rawData$Activity)
-rawData$Subject     <- factor(rawData$Subject)
+rawData$Activity <- factor(rawData$Activity)
+rawData$Subject  <- factor(rawData$Subject)
 
 
 ## renaming columns names
