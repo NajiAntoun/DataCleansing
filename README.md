@@ -21,4 +21,4 @@ This Data Set is built from the recordings of 30 subjects performing activities 
 
 
 # Output 
-tidy data file called **tidyData.txt** created in R working directory
+tidy data file called **tidyData.txt** created in R working directory. 
