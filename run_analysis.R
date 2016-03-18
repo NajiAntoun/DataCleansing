@@ -13,11 +13,11 @@
 library(data.table)
 
 ## reading features and activities labels
-feature_labels  <- read.table("UCI HAR Dataset/features.txt")
-activity_labels <- read.table("UCI HAR Dataset/activity_labels.txt")
+feature_labels  <- read.table("UCI HAR Dataset/features.txt", colClasses="character")
+activity_labels <- read.table("UCI HAR Dataset/activity_labels.txt", colClasses="character")
 
 ## storing needed columns (mean and standard deviation)
-features_ext <- grepl("mean|std", t(feature_labels[2]), ignore.case=TRUE)
+features_ext <- grepl("mean\\(|std\\(", t(feature_labels[2]))
 
 ## reading train related data and adding columns names
 train_activities <- merge(read.table("UCI HAR Dataset/train/y_train.txt", header = FALSE), activity_labels, by.x="V1", by.y="V1")
@@ -59,23 +59,22 @@ rawData$Subject  <- factor(rawData$Subject)
 
 ## renaming columns names
 names(rawData)<-gsub("()", "", names(rawData), fixed = TRUE)
-names(rawData)<-gsub("^t", "Time", names(rawData))
-names(rawData)<-gsub("^f", "Freq", names(rawData))
-names(rawData)<-gsub("-mean", "Mean", names(rawData), ignore.case = TRUE)
-names(rawData)<-gsub("-std", "Std", names(rawData), ignore.case = TRUE)
-names(rawData)<-gsub("-freq", "Freq", names(rawData), ignore.case = TRUE)
-names(rawData)<-gsub("Acc", "Acceleration", names(rawData))
-names(rawData)<-gsub("Gyro", "AngularVelocity", names(rawData))
-names(rawData)<-gsub("tBody", "TimeBody", names(rawData))
-names(rawData)<-gsub("BodyBody", "Body", names(rawData))
-names(rawData)<-gsub("^angle", "Angle", names(rawData))
-names(rawData)<-gsub("gravity", "Gravity", names(rawData))
+names(rawData)<-gsub("^t", "time-", names(rawData))
+names(rawData)<-gsub("^f", "frequency-", names(rawData))
+names(rawData)<-gsub("-freq", "-frequency", names(rawData), ignore.case = TRUE)
+names(rawData)<-gsub("mag", "-magnitude", names(rawData), ignore.case = TRUE)
+names(rawData)<-gsub("Acc", "-accelerometer", names(rawData))
+names(rawData)<-gsub("Jerk","-jerk",names(rawData))
+names(rawData)<-gsub("Gyro", "-gyroscope", names(rawData))
+names(rawData)<-gsub("tBody", "time-body", names(rawData))
+names(rawData)<-gsub("Body|BodyBody", "body", names(rawData))
+names(rawData)<-tolower(names(rawData))
 
 ## aggregating data using the mean function
-tidyData <- as.data.table(aggregate(. ~Activity + Subject, rawData, mean))
+tidyData <- as.data.table(aggregate(. ~activity + subject, rawData, mean))
 
 ## sorting data by Activity and Subject
-tidyData <- tidyData[order(Activity, Subject),]
+tidyData <- tidyData[order(activity, subject),]
 
 ## writing the tidy data into a file
 write.table(tidyData, file = "TidyData.txt", row.names = FALSE)
