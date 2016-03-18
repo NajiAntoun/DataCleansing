@@ -67,6 +67,12 @@ The transformations are :
 ### Description
 the tidy set is an average-based aggregation by activity and subject of all mean and standard deviation measures available in the source.
 
+## Filename 
+tidyData.txt
+
+## File location
+R Working directory
+
 ## Data
 * 40 observations
 * 88 variables
@@ -170,9 +176,9 @@ the tidy set is an average-based aggregation by activity and subject of all mean
 run_analysis.R
 
 ### Pre-requesites
-the script uses the data.table library and should be installed as a pre-requesite. 
+the script uses the data.table library which should be installed as a pre-requesite. 
 
 ### Usage
-1. unzip the *getdata-projectfiles-UCI HAR Dataset.zip* zip file in your working directory
-2. make sure that the pre-requesites stated in the previous chapter are met
+1. unzip the *getdata-projectfiles-UCI HAR Dataset.zip* zip file in your R working directory
+2. make sure that all the pre-requesites stated in the previous chapter are met
 3. execute the run_analysis.R script
