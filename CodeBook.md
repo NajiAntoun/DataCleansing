@@ -63,9 +63,9 @@ Transformations done :
 4. Appropriately labels the data set with descriptive variable names
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
 
-## Tidy Set 
+## Tidy Set File
 
-### Description
+### File Description
 the tidy set is an average-based aggregation by activity and subject of all mean and standard deviation measures available in the test and train source data set.
 
 * **Filename** : _TidyData.txt_
@@ -73,11 +73,11 @@ the tidy set is an average-based aggregation by activity and subject of all mean
 * **Format** : _text file_
 * **Location** : _R working directory_
 
-## Data
+### File Content
 * **observations** : 40
 * **variables** : 88 
 
-### Structure
+### File Structure
 * **Factors**
     * Activity
     * Subject
