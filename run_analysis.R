@@ -11,6 +11,7 @@
 ## ----------------------------------------------------------------------------------- ##
 
 library(data.table)
+library(dplyr)
 
 ## reading features and activities labels
 feature_labels  <- read.table("UCI HAR Dataset/features.txt", colClasses="character")
@@ -70,11 +71,11 @@ names(rawData)<-gsub("tBody", "time-body", names(rawData))
 names(rawData)<-gsub("Body|BodyBody", "body", names(rawData))
 names(rawData)<-tolower(names(rawData))
 
-## aggregating data using the mean function
-tidyData <- as.data.table(aggregate(. ~activity + subject, rawData, mean))
+## aggregating data by activity and subject using the mean function
+tidyData <- tbl_df(aggregate(. ~activity + subject, rawData, mean))
 
-## sorting data by Activity and Subject
-tidyData <- tidyData[order(activity, subject),]
+## sorting data by activity and subject
+tidyData <- arrange(tidyData, activity, subject)
 
 ## writing the tidy data into a file
 write.table(tidyData, file = "TidyData.txt", row.names = FALSE)
