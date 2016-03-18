@@ -15,6 +15,7 @@ You should create one R script called run_analysis.R that does the following.
 
 # Input
 Human Activity Recognition Using Smartphones Data Set.
+
 This Data Set is built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors.
 
 
