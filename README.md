@@ -1,6 +1,9 @@
 # DataCleansing
 Coursera Data Science Specialization - Getting and Cleaning Data
 
+# Project Purpose
+The purpose of this project is to demonstrate one's ability to collect, work with, and clean a data set.
+
 # Project Description
 You should create one R script called run_analysis.R that does the following.
 
@@ -11,7 +14,10 @@ You should create one R script called run_analysis.R that does the following.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 # Input
-Human Activity Recognition Using Smartphones Data Set 
+Human Activity Recognition Using Smartphones Data Set.
+This Data Set is built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors.
+
+
 
 # Output 
 tidy data file called **tidyData.txt** created in R working directory
