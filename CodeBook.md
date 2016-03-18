@@ -75,99 +75,79 @@ the tidy set is an average-based aggregation by activity and subject of all mean
 
 ### File Content
 * **observations** : 40
-* **variables** : 88 
+* **variables** : 68 
 
 ### File Structure
 * **Factors**
-    * Activity
-    * Subject
+    * activity
+    * subject
 * **Measures (averages)**
-    * TimeBodyAccelerationMean-X
-    * TimeBodyAccelerationMean-Y 
-    * TimeBodyAccelerationMean-Z
-    * TimeBodyAccelerationStd-X
-    * TimeBodyAccelerationStd-Y
-    * TimeBodyAccelerationStd-Z
-    * TimeGravityAccelerationMean-X
-    * TimeGravityAccelerationMean-Y
-    * TimeGravityAccelerationMean-Z
-    * TimeGravityAccelerationStd-X
-    * TimeGravityAccelerationStd-Y
-    * TimeGravityAccelerationStd-Z
-    * TimeBodyAccelerationJerkMean-X
-    * TimeBodyAccelerationJerkMean-Y
-    * TimeBodyAccelerationJerkMean-Z
-    * TimeBodyAccelerationJerkStd-X
-    * TimeBodyAccelerationJerkStd-Y
-    * TimeBodyAccelerationJerkStd-Z 
-    * TimeBodyAngularVelocityMean-X
-    * TimeBodyAngularVelocityMean-Y
-    * TimeBodyAngularVelocityMean-Z
-    * TimeBodyAngularVelocityStd-X
-    * TimeBodyAngularVelocityStd-Y
-    * TimeBodyAngularVelocityStd-Z 
-    * TimeBodyAngularVelocityJerkMean-X
-    * TimeBodyAngularVelocityJerkMean-Y
-    * TimeBodyAngularVelocityJerkMean-Z
-    * TimeBodyAngularVelocityJerkStd-X
-    * TimeBodyAngularVelocityJerkStd-Y
-    * TimeBodyAngularVelocityJerkStd-Z
-    * TimeBodyAccelerationMagMean
-    * TimeBodyAccelerationMagStd
-    * TimeGravityAccelerationMagMean
-    * TimeGravityAccelerationMagStd
-    * TimeBodyAccelerationJerkMagMean
-    * TimeBodyAccelerationJerkMagStd
-    * TimeBodyAngularVelocityMagMean
-    * TimeBodyAngularVelocityMagStd
-    * TimeBodyAngularVelocityJerkMagMean
-    * TimeBodyAngularVelocityJerkMagStd
-    * FreqBodyAccelerationMean-X
-    * FreqBodyAccelerationMean-Y
-    * FreqBodyAccelerationMean-Z
-    * FreqBodyAccelerationStd-X
-    * FreqBodyAccelerationStd-Y
-    * FreqBodyAccelerationStd-Z
-    * FreqBodyAccelerationMeanFreq-X
-    * FreqBodyAccelerationMeanFreq-Y
-    * FreqBodyAccelerationMeanFreq-Z
-    * FreqBodyAccelerationJerkMean-X
-    * FreqBodyAccelerationJerkMean-Y
-    * FreqBodyAccelerationJerkMean-Z
-    * FreqBodyAccelerationJerkStd-X
-    * FreqBodyAccelerationJerkStd-Y
-    * FreqBodyAccelerationJerkStd-Z
-    * FreqBodyAccelerationJerkMeanFreq-X
-    * FreqBodyAccelerationJerkMeanFreq-Y
-    * FreqBodyAccelerationJerkMeanFreq-Z
-    * FreqBodyAngularVelocityMean-X
-    * FreqBodyAngularVelocityMean-Y
-    * FreqBodyAngularVelocityMean-Z
-    * FreqBodyAngularVelocityStd-X 
-    * FreqBodyAngularVelocityStd-Y
-    * FreqBodyAngularVelocityStd-Z
-    * FreqBodyAngularVelocityMeanFreq-X
-    * FreqBodyAngularVelocityMeanFreq-Y
-    * FreqBodyAngularVelocityMeanFreq-Z
-    * FreqBodyAccelerationMagMean
-    * FreqBodyAccelerationMagStd
-    * FreqBodyAccelerationMagMeanFreq
-    * FreqBodyAccelerationJerkMagMean
-    * FreqBodyAccelerationJerkMagStd
-    * FreqBodyAccelerationJerkMagMeanFreq
-    * FreqBodyAngularVelocityMagMean
-    * FreqBodyAngularVelocityMagStd
-    * FreqBodyAngularVelocityMagMeanFreq
-    * FreqBodyAngularVelocityJerkMagMean
-    * FreqBodyAngularVelocityJerkMagStd
-    * FreqBodyAngularVelocityJerkMagMeanFreq 
-    * Angle(TimeBodyAccelerationMean,Gravity) 
-    * Angle(TimeBodyAccelerationJerkMean),GravityMean)
-    * Angle(TimeBodyAngularVelocityMean,GravityMean) 
-    * Angle(TimeBodyAngularVelocityJerkMean,GravityMean)
-    * Angle(X,GravityMean)
-    * Angle(Y,GravityMean) 
-    * Angle(Z,GravityMean)
+* time-body-accelerometer-mean-x
+* time-body-accelerometer-mean-y
+* time-body-accelerometer-mean-z 
+* time-body-accelerometer-std-x
+* time-body-accelerometer-std-y
+* time-body-accelerometer-std-z 
+* time-gravity-accelerometer-mean-x
+* time-gravity-accelerometer-mean-y
+* time-gravity-accelerometer-mean-z
+* time-gravity-accelerometer-std-x
+* time-gravity-accelerometer-std-y
+* time-gravity-accelerometer-std-z
+* time-body-accelerometer-jerk-mean-x
+* time-body-accelerometer-jerk-mean-y
+* time-body-accelerometer-jerk-mean-z
+* time-body-accelerometer-jerk-std-x
+* time-body-accelerometer-jerk-std-y
+* time-body-accelerometer-jerk-std-z
+* time-body-gyroscope-mean-x 
+* time-body-gyroscope-mean-y 
+* time-body-gyroscope-mean-z
+* time-body-gyroscope-std-x
+* time-body-gyroscope-std-y
+* time-body-gyroscope-std-z 
+* time-body-gyroscope-jerk-mean-x
+* time-body-gyroscope-jerk-mean-y
+* time-body-gyroscope-jerk-mean-z 
+* time-body-gyroscope-jerk-std-x 
+* time-body-gyroscope-jerk-std-y 
+* time-body-gyroscope-jerk-std-z 
+* time-body-accelerometer-magnitude-mean
+* time-body-accelerometer-magnitude-std
+* time-gravity-accelerometer-magnitude-mean
+* time-gravity-accelerometer-magnitude-std
+* time-body-accelerometer-jerk-magnitude-mean
+* time-body-accelerometer-jerk-magnitude-std 
+* time-body-gyroscope-magnitude-mean
+* * time-body-gyroscope-magnitude-std
+* time-body-gyroscope-jerk-magnitude-mean
+* time-body-gyroscope-jerk-magnitude-std
+* frequency-body-accelerometer-mean-x
+* frequency-body-accelerometer-mean-y
+* frequency-body-accelerometer-mean-z 
+* frequency-body-accelerometer-std-x
+* frequency-body-accelerometer-std-y
+* frequency-body-accelerometer-std-z
+* frequency-body-accelerometer-jerk-mean-x 
+* frequency-body-accelerometer-jerk-mean-y 
+* frequency-body-accelerometer-jerk-mean-z
+* frequency-body-accelerometer-jerk-std-x
+* frequency-body-accelerometer-jerk-std-y
+* frequency-body-accelerometer-jerk-std-z
+* frequency-body-gyroscope-mean-x
+* frequency-body-gyroscope-mean-y 
+* frequency-body-gyroscope-mean-z 
+* frequency-body-gyroscope-std-x 
+* frequency-body-gyroscope-std-y 
+* frequency-body-gyroscope-std-z
+* frequency-body-accelerometer-magnitude-mean
+* frequency-body-accelerometer-magnitude-std 
+* frequency-body-accelerometer-jerk-magnitude-mean
+* frequency-body-accelerometer-jerk-magnitude-std 
+* frequency-body-gyroscope-magnitude-mean
+* frequency-body-gyroscope-magnitude-std
+* frequency-body-gyroscope-jerk-magnitude-mean
+* frequency-body-gyroscope-jerk-magnitude-std 
 
 
 ## R Script description
