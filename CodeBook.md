@@ -68,15 +68,14 @@ Transformations done :
 ### Description
 the tidy set is an average-based aggregation by activity and subject of all mean and standard deviation measures available in the source.
 
-## Filename 
-tidyData.txt
-
-## File location
-R Working directory
+* **Filename** : _TidyData.txt_
+* **Header** : _yes_
+* **Format** : _text file_
+* **Location** : _R working directory_
 
 ## Data
-* 40 observations
-* 88 variables
+* **observations** : 40
+* **variables** : 88 
 
 ### Structure
 * **Factors**
