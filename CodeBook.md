@@ -22,7 +22,7 @@ For each record in the dataset it is provided:
 * Data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 ### Files description
-* 'README.txt'
+* 'README.txt' : Information about the data set
 
 * 'features_info.txt': Shows information about the variables used on the feature vector.
 
