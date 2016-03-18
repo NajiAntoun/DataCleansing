@@ -62,6 +62,108 @@ The transformations are :
 * Appropriately labels the data set with descriptive variable names
 * From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
 
+## Tidy Set 
+
+### Description
+the tidy set is an average-based aggregation by activity and subject of all mean and standard deviation measures available in the source.
+
+## Data
+* 40 observations
+* 88 variables
+
+### Structure
+* **Factors**
+    * Activity
+    * Subject
+* **Measures**
+    * TimeBodyAccelerationMean-X
+    * TimeBodyAccelerationMean-Y 
+    * TimeBodyAccelerationMean-Z
+    * TimeBodyAccelerationStd-X
+    * TimeBodyAccelerationStd-Y
+    * TimeBodyAccelerationStd-Z
+    * TimeGravityAccelerationMean-X
+    * TimeGravityAccelerationMean-Y
+    * TimeGravityAccelerationMean-Z
+    * TimeGravityAccelerationStd-X
+    * TimeGravityAccelerationStd-Y
+    * TimeGravityAccelerationStd-Z
+    * TimeBodyAccelerationJerkMean-X
+    * TimeBodyAccelerationJerkMean-Y
+    * TimeBodyAccelerationJerkMean-Z
+    * TimeBodyAccelerationJerkStd-X
+    * TimeBodyAccelerationJerkStd-Y
+    * TimeBodyAccelerationJerkStd-Z 
+    * TimeBodyAngularVelocityMean-X
+    * TimeBodyAngularVelocityMean-Y
+    * TimeBodyAngularVelocityMean-Z
+    * TimeBodyAngularVelocityStd-X
+    * TimeBodyAngularVelocityStd-Y
+    * TimeBodyAngularVelocityStd-Z 
+    * TimeBodyAngularVelocityJerkMean-X
+    * TimeBodyAngularVelocityJerkMean-Y
+    * TimeBodyAngularVelocityJerkMean-Z
+    * TimeBodyAngularVelocityJerkStd-X
+    * TimeBodyAngularVelocityJerkStd-Y
+    * TimeBodyAngularVelocityJerkStd-Z
+    * TimeBodyAccelerationMagMean
+    * TimeBodyAccelerationMagStd
+    * TimeGravityAccelerationMagMean
+    * TimeGravityAccelerationMagStd
+    * TimeBodyAccelerationJerkMagMean
+    * TimeBodyAccelerationJerkMagStd
+    * TimeBodyAngularVelocityMagMean
+    * TimeBodyAngularVelocityMagStd
+    * TimeBodyAngularVelocityJerkMagMean
+    * TimeBodyAngularVelocityJerkMagStd
+    * FreqBodyAccelerationMean-X
+    * FreqBodyAccelerationMean-Y
+    * FreqBodyAccelerationMean-Z
+    * FreqBodyAccelerationStd-X
+    * FreqBodyAccelerationStd-Y
+    * FreqBodyAccelerationStd-Z
+    * FreqBodyAccelerationMeanFreq-X
+    * FreqBodyAccelerationMeanFreq-Y
+    * FreqBodyAccelerationMeanFreq-Z
+    * FreqBodyAccelerationJerkMean-X
+    * FreqBodyAccelerationJerkMean-Y
+    * FreqBodyAccelerationJerkMean-Z
+    * FreqBodyAccelerationJerkStd-X
+    * FreqBodyAccelerationJerkStd-Y
+    * FreqBodyAccelerationJerkStd-Z
+    * FreqBodyAccelerationJerkMeanFreq-X
+    * FreqBodyAccelerationJerkMeanFreq-Y
+    * FreqBodyAccelerationJerkMeanFreq-Z
+    * FreqBodyAngularVelocityMean-X
+    * FreqBodyAngularVelocityMean-Y
+    * FreqBodyAngularVelocityMean-Z
+    * FreqBodyAngularVelocityStd-X 
+    * FreqBodyAngularVelocityStd-Y
+    * FreqBodyAngularVelocityStd-Z
+    * FreqBodyAngularVelocityMeanFreq-X
+    * FreqBodyAngularVelocityMeanFreq-Y
+    * FreqBodyAngularVelocityMeanFreq-Z
+    * FreqBodyAccelerationMagMean
+    * FreqBodyAccelerationMagStd
+    * FreqBodyAccelerationMagMeanFreq
+    * FreqBodyAccelerationJerkMagMean
+    * FreqBodyAccelerationJerkMagStd
+    * FreqBodyAccelerationJerkMagMeanFreq
+    * FreqBodyAngularVelocityMagMean
+    * FreqBodyAngularVelocityMagStd
+    * FreqBodyAngularVelocityMagMeanFreq
+    * FreqBodyAngularVelocityJerkMagMean
+    * FreqBodyAngularVelocityJerkMagStd
+    * FreqBodyAngularVelocityJerkMagMeanFreq 
+    * Angle(TimeBodyAccelerationMean,Gravity) 
+    * Angle(TimeBodyAccelerationJerkMean),GravityMean)
+    * Angle(TimeBodyAngularVelocityMean,GravityMean) 
+    * Angle(TimeBodyAngularVelocityJerkMean,GravityMean)
+    * Angle(X,GravityMean)
+    * Angle(Y,GravityMean) 
+    * Angle(Z,GravityMean)
+
+
 ## R Script description
 
 ### Script name
